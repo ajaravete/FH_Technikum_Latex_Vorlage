@@ -1,0 +1,40 @@
+%!TEX root=../document.tex
+
+\section{Ergebnisse}
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+\subsection{Tabelle}
+\renewcommand{\arraystretch}{1.5}
+\begin{table}[!h]
+	\center
+	\begin{tabular}{ | @{\hspace{3mm}} c @{\hspace{3mm}} | @{\hspace{3mm}} l @{\hspace{3mm}} | }
+		\hline Header & Kopf\\ \hline\hline
+		\textbf{Lorem} & Ipsum dolor sit amet, consetetur sadipscing elitr\\ \hline
+		\textbf{Ipsum} & At vero eos et accusam et justo duo dolores et ea rebum.\\
+		& Stet clita kasd gubergren, no sea takimata sanctus\\ \hline
+		\textbf{Dolor} & Consetetur sadipscing elitr, sed diam nonumy\\\hline
+	\end{tabular}
+	\caption{Lorem ipsum dolor sit amet \cite{example}}
+	\label{methoden}
+\end{table}
+
+\subsection{Aufzählung}
+
+\begin{itemize}
+	\item \textbf{Lorem ipsum:} dolor sit amet, consetetur sadipscing elitr
+	\item sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat
+	\item ut labore et dolore magna aliquyam erat, sed diam voluptua
+\end{itemize}
+
+\subsection{Code}
+
+At vero eos et accusam et justo duo dolores et ea rebum.
+
+\begin{lstlisting}[frame=tb, numbers=none, aboveskip=4mm, belowskip=2mm, caption=code]
+$ echo "Hello World!" > file
+\end{lstlisting}
+

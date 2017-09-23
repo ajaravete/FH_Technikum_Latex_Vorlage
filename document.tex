@@ -1,0 +1,61 @@
+\documentclass[a4paper, 11pt]{article}
+
+\input special/preamble.tex
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% DEFINITIONS
+% Change those informations
+\gdef\mytitle{Laborprotokoll}
+\gdef\mythema{Übung XY}
+
+\gdef\mycourse{BIFx}
+\gdef\mysubject{Fach}
+\gdef\myauthor{Name}
+
+\gdef\mykennzeichen{1234567890}
+\gdef\mydatum{23.09.2017}
+\gdef\myort{Wien}
+\gdef\myteacher{Professor}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\linespread{0.94}
+
+\fancyhf{}
+
+\fancyhead[L]{\slshape\rightmark}
+\fancyfoot[R]{Seite \thepage \hspace{1pt} von \pageref{LastPage}}
+\fancyfoot[L]{\myauthor}
+
+\begin{document}
+\parindent 0pt
+\parskip 6pt
+
+\pagenumbering{Roman}
+\input{special/title}
+
+\clearpage
+\tableofcontents
+
+\clearpage
+\pagenumbering{arabic}
+\pagestyle{fancy}
+
+\onehalfspacing
+
+\input sections/task.tex
+\clearpage
+\input sections/solution.tex
+
+\clearpage
+
+%\listoffigures
+\listoftables
+\lstlistoflistings
+
+\bibliography{sources}
+
+\end{document}
