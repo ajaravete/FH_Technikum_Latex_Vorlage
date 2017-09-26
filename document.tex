@@ -36,11 +36,13 @@
 
 \pagenumbering{Roman}
 \input{special/title}
-
 \clearpage
+
+\microtypesetup{protrusion=false}
 \tableofcontents
-
+\microtypesetup{protrusion=true}
 \clearpage
+
 \pagenumbering{arabic}
 \pagestyle{fancy}
 
@@ -49,9 +51,9 @@
 \input sections/task.tex
 \clearpage
 \input sections/solution.tex
-
 \clearpage
 
+\microtypesetup{protrusion=false}
 %\listoffigures
 \listoftables
 \lstlistoflistings

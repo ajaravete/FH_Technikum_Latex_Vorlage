@@ -48,6 +48,8 @@
 \usepackage{svg}
 \usepackage{amsmath}
 \bibliographystyle{plain}
+\usepackage{microtype}
+
 % font
 \usepackage{lmodern}
 \usepackage{inconsolata}
@@ -102,8 +104,10 @@
 	aboveskip=0.4cm,
 	showspaces=false,
 	showstringspaces=false,
-	basewidth={0.53em,0.45em},
-	frame=single
+	basewidth={0.5em, 0.45em},
+	frame=single,
+	extendedchars=true,
+	literate={ä}{{\"a}}1 {ü}{{\"u}}1 {ö}{{\"o}}1
 }
 
 \lstdefinelanguage{JavaScript}{
