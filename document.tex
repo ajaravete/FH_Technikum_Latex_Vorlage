@@ -1,4 +1,4 @@
-\documentclass[a4paper, 11pt]{article}
+\documentclass[a4paper, 12pt]{article}
 
 \input special/preamble.tex
 
@@ -31,33 +31,33 @@
 \fancyfoot[L]{\myauthor}
 
 \begin{document}
-\parindent 0pt
-\parskip 6pt
-
-\pagenumbering{Roman}
-\input{special/title}
-\clearpage
-
-\microtypesetup{protrusion=false}
-\tableofcontents
-\microtypesetup{protrusion=true}
-\clearpage
-
-\pagenumbering{arabic}
-\pagestyle{fancy}
-
-\onehalfspacing
-
-\input sections/task.tex
-\clearpage
-\input sections/solution.tex
-\clearpage
-
-\microtypesetup{protrusion=false}
-%\listoffigures
-\listoftables
-\lstlistoflistings
-
-\bibliography{sources}
-
+	\parindent 0pt
+	\parskip 6pt
+	
+	\pagenumbering{Roman}
+	\input{special/title}
+	\clearpage
+	
+	\microtypesetup{protrusion=false}
+	\tableofcontents
+	\microtypesetup{protrusion=true}
+	\clearpage
+	
+	\pagenumbering{arabic}
+	\pagestyle{fancy}
+	
+	\onehalfspacing
+	
+	\input sections/task.tex
+	\clearpage
+	\input sections/solution.tex
+	\clearpage
+	
+	\microtypesetup{protrusion=false}
+	%\listoffigures
+	\listoftables
+	\lstlistoflistings
+	
+	\bibliography{sources}
+	
 \end{document}
