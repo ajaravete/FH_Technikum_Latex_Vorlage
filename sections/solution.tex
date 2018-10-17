@@ -1,11 +1,7 @@
 %!TEX root=../document.tex
 
 \section{Ergebnisse}
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+\lipsum[2]
 
 \subsection{Tabelle}
 \renewcommand{\arraystretch}{1.5}
@@ -22,19 +18,19 @@ At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergr
 	\label{methoden}
 \end{table}
 
-\subsection{Aufzählung}
+\subsection{Lorem Ipsum}
 
-\begin{itemize}
-	\item \textbf{Lorem ipsum:} dolor sit amet, consetetur sadipscing elitr
-	\item sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat
-	\item ut labore et dolore magna aliquyam erat, sed diam voluptua
-\end{itemize}
+\lipsum[5-8]
 
 \subsection{Code}
-
 At vero eos et accusam et justo duo dolores et ea rebum.
 
-\begin{lstlisting}[frame=tb, numbers=none, aboveskip=4mm, belowskip=2mm, caption=code]
+\begin{lstlisting}[frame=tb, numbers=none, aboveskip=4mm, belowskip=2mm, caption=Code]
 $ echo "Hello World!" > file
 \end{lstlisting}
 
+\begin{lstlisting}[language=Java, caption=Java Code]
+public static void main(String[] args) {
+	System.out.println("Hello World!");
+}
+\end{lstlisting}

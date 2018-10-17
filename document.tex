@@ -1,6 +1,6 @@
-\documentclass[a4paper, 12pt]{article}
+\documentclass[a4paper, 11pt]{article}
 
-\input special/preamble.tex
+\input{special/preamble.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % DEFINITIONS
@@ -27,7 +27,7 @@
 \fancyhf{}
 
 \fancyhead[L]{\slshape\leftmark}
-\fancyfoot[R]{Seite \thepage \hspace{1pt} von \pageref{LastPage}}
+\fancyfoot[R]{Seite \thepage \hspace{1pt} von \pageref*{LastPage}}
 \fancyfoot[L]{\myauthor}
 
 % Makes \leftmark and \rightmark work normal again
@@ -45,7 +45,10 @@
 	\clearpage
 	
 	\microtypesetup{protrusion=false}
-	\tableofcontents
+	{
+		\hypersetup{linkcolor=black}
+		\tableofcontents
+	}
 	\microtypesetup{protrusion=true}
 	\clearpage
 	
@@ -54,16 +57,17 @@
 	
 	\onehalfspacing
 	
-	\input sections/task.tex
+	\input{sections/task.tex}
 	\clearpage
-	\input sections/solution.tex
+	\input{sections/solution.tex}
 	\clearpage
 	
 	\microtypesetup{protrusion=false}
-	%\listoffigures
-	\listoftables
-	\lstlistoflistings
-	
-	\bibliography{sources}
-	
+	{
+		\hypersetup{linkcolor=black}
+		\listoffigures
+		\listoftables
+		\lstlistoflistings
+		\bibliography{sources}
+	}
 \end{document}
