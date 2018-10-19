@@ -22,8 +22,6 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
-\linespread{0.94}
-
 \fancyhf{}
 
 \fancyhead[L]{\slshape\leftmark}
@@ -43,7 +41,7 @@
 	\pagenumbering{Roman}
 	\input{special/title}
 	\clearpage
-	
+
 	\microtypesetup{protrusion=false}
 	{
 		\hypersetup{linkcolor=black}
@@ -55,8 +53,6 @@
 	\pagenumbering{arabic}
 	\pagestyle{fancy}
 	
-	\onehalfspacing
-	
 	\input{sections/task.tex}
 	\clearpage
 	\input{sections/solution.tex}
@@ -67,7 +63,12 @@
 		\hypersetup{linkcolor=black}
 		\listoffigures
 		\listoftables
+		
+		% important because listoflistings has only single spacing
+		\onehalfspacing
 		\lstlistoflistings
+		
+		\singlespacing
 		\bibliography{sources}
 	}
 \end{document}
