@@ -24,14 +24,14 @@
 
 \fancyhf{}
 
-\fancyhead[L]{\slshape\leftmark}
-\fancyfoot[R]{Seite \thepage \hspace{1pt} von \pageref*{LastPage}}
+\fancyhead[L]{\slshape\rightmark}
+\fancyfoot[R]{Seite \thepage{} von \pageref*{LastPage}}
 \fancyfoot[L]{\myauthor}
 
 % Makes \leftmark and \rightmark work normal again
 \pagestyle{fancy}
-\renewcommand{\sectionmark}[1]{\markboth{\thesection.\ \ \MakeUppercase{#1}}{}}
-\renewcommand{\subsectionmark}[1]{\markright{\thesubsection\ \ #1}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection.\ \ \MakeUppercase{#1}}}
+%\renewcommand{\subsectionmark}[1]{\markright{\thesubsection\ \ #1}}
 \pagestyle{empty}
 
 \begin{document}
