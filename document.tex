@@ -36,8 +36,6 @@
 \pagestyle{empty}
 
 \begin{document}
-	\parindent 0pt
-	\parskip 6pt
 	
 	% Title	
 	\pagenumbering{Roman}
@@ -47,19 +45,20 @@
 	% Table of content
 	\microtypesetup{protrusion=false}
 	{
+		\onehalfspacing
 		\hypersetup{linkcolor=black}
 		\tableofcontents
+		\clearpage
 	}
 
 	% Main content
 	\microtypesetup{protrusion=true}
-	\clearpage
-	
 	\pagenumbering{arabic}
 	\pagestyle{fancy}
+	\parindent 0pt
+	\parskip 12pt
 	
 	\input{sections/task.tex}
-	\clearpage
 	\input{sections/solution.tex}
 	\clearpage
 	
@@ -67,6 +66,9 @@
 	\microtypesetup{protrusion=false}
 	{
 		\hypersetup{linkcolor=black}
+		\parskip 0pt
+		\onehalfspacing
+		
 		\listoffigures
 		\listoftables
 		
