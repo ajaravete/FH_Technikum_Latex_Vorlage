@@ -8,4 +8,5 @@
 *.blg
 *.lot
 *.lof
-
+*.bcf
+*.run*
