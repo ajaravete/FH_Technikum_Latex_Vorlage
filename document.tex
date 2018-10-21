@@ -22,6 +22,7 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
+% Header and Footer
 \fancyhf{}
 
 \fancyhead[L]{\slshape\rightmark}
@@ -38,15 +39,19 @@
 	\parindent 0pt
 	\parskip 6pt
 	
+	% Title	
 	\pagenumbering{Roman}
 	\input{special/title}
 	\clearpage
-
+	
+	% Table of content
 	\microtypesetup{protrusion=false}
 	{
 		\hypersetup{linkcolor=black}
 		\tableofcontents
 	}
+
+	% Main content
 	\microtypesetup{protrusion=true}
 	\clearpage
 	
@@ -58,6 +63,7 @@
 	\input{sections/solution.tex}
 	\clearpage
 	
+	% Bibliography, List of Tables, Figures, Listings
 	\microtypesetup{protrusion=false}
 	{
 		\hypersetup{linkcolor=black}
