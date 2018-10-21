@@ -1,4 +1,8 @@
-\documentclass[12pt]{scrartcl}
+\documentclass[12pt,
+	twoside=false,
+	listof=totoc,
+	bibliography=totoc,
+	index=totoc]{scrartcl}
 
 \input{special/preamble.tex}
 
@@ -19,25 +23,37 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0.4pt}
+%\renewcommand{\headrulewidth}{0.4pt}
+%\renewcommand{\footrulewidth}{0.4pt}
 
 % Header and Footer
-\fancyhf{}
+\clearpairofpagestyles
 
-\fancyhead[L]{\slshape\rightmark}
-\fancyfoot[R]{Seite \thepage{} von \pageref*{LastPage}}
-\fancyfoot[L]{\myauthor}
+\KOMAoptions{
+	headsepline = true,
+	footsepline = true
+}
 
-% Makes \leftmark and \rightmark work normal again
-\pagestyle{fancy}
+% Spacing between footer and footer line
+\ModifyLayer[addvoffset=-.5ex]{scrheadings.foot.above.line}
+\ModifyLayer[addvoffset=-.5ex]{plain.scrheadings.foot.above.line}
+
+\setkomafont{pageheadfoot}{}
+\setkomafont{pagehead}{}
+\setkomafont{pagination}{}
+
+\automark[section]{section}
+\lohead*{\headmark}
+\rofoot*{Seite \pagemark{} von \pageref*{LastPage}}
+\lofoot*{\myauthor}
+
 \renewcommand{\sectionmark}[1]{\markright{\thesection.\ \ \MakeUppercase{#1}}}
 %\renewcommand{\subsectionmark}[1]{\markright{\thesubsection\ \ #1}}
-\pagestyle{empty}
 
 \begin{document}
 	
-	% Title	
+	% Title
+	\pagestyle{empty}
 	\pagenumbering{Roman}
 	\input{special/title}
 	\clearpage
@@ -45,6 +61,15 @@
 	% Table of content
 	\microtypesetup{protrusion=false}
 	{
+		% Footer for toc
+		\clearpairofpagestyles
+		\KOMAoptions{
+			headsepline = false,
+			footsepline = false
+		}
+		\cofoot{\pagemark}
+		\pagestyle{scrheadings}
+		
 		\onehalfspacing
 		\hypersetup{linkcolor=black}
 		\tableofcontents
@@ -54,7 +79,7 @@
 	% Main content
 	\microtypesetup{protrusion=true}
 	\pagenumbering{arabic}
-	\pagestyle{fancy}
+	\pagestyle{scrheadings}
 	\parindent 0pt
 	\parskip 12pt
 	

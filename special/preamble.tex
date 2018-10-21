@@ -4,8 +4,8 @@
 % Fontencoding for possible copy&paste out of PDF
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-% Um eine weiter subsection zu erlauben
-\usepackage{titlesec}
+% Um sections zu verändern
+\usepackage{sectsty}
 % Um Tabellen einfacher und besser zu gestalten
 \usepackage{tabularx}
 % Um das Euro Symbol zu verwenden
@@ -16,10 +16,11 @@
 \usepackage[final]{listings}
 \usepackage{array}
 \usepackage[dvipsnames]{xcolor}
-\usepackage{sectsty}
 \usepackage{pgfplots}
 \usepackage[justification=centering]{caption}
-\usepackage{fancyhdr}
+% Header and Footer package
+% draft=false removes rulers from draft mode
+\usepackage[draft=false]{scrlayer-scrpage}
 \usepackage{geometry}
 \usepackage{lastpage}
 \usepackage{graphics}
@@ -37,14 +38,11 @@
 \usepackage[toc,section=section]{glossaries}
 \makenoidxglossaries
 \usepackage{todonotes}
-\usepackage{emptypage}
 \usepackage{upquote}
-% for list of figures, table of contents, listings, ... in table of contents
-\usepackage{tocbibind}
+\usepackage[autostyle=true,german=quotes]{csquotes}
 \usepackage{float}
 \usepackage{dirtree}
 \usepackage{accsupp}
-\usepackage{fixltx2e}
 \usepackage{amsmath}
 \usepackage{microtype}
 \usepackage{lipsum}
